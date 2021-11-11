@@ -1,8 +1,6 @@
 # Neutron Capture GNN
--------------------------------------------------
 
 ## Installation
------------------------
 
 We assume that you have a CUDA capable GPU in your local machine.  
 ### CUDA toolkit
