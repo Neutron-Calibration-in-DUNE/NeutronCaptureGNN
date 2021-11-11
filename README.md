@@ -1,5 +1,11 @@
 # Neutron Capture GNN
 
+<p align="center">
+  <img height="150" src="https://raw.githubusercontent.com/pyg-team/pytorch_geometric/master/docs/source/_static/img/pyg1.svg?sanitize=true" />
+</p>
+
+This repository hosts a GNN implementation using pytorch_geometric for studying neutron capture processes in LArTPCs, specifically in the DUNE experiment.
+
 ## Installation
 
 We assume that you have a CUDA capable GPU in your local machine.  
