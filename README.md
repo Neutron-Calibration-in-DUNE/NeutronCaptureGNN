@@ -1,10 +1,10 @@
 # Neutron Capture GNN
 
-<p align="center">
-  <img height="150" src="https://raw.githubusercontent.com/pyg-team/pytorch_geometric/master/docs/source/_static/img/pyg1.svg?sanitize=true" />
+<p align="left">
+  <img height="60" src="https://raw.githubusercontent.com/pyg-team/pytorch_geometric/master/docs/source/_static/img/pyg1.svg?sanitize=true" />
 </p>
 
-[![OSF data]()](https://osf.io/u2gzq/?view_only=1d989690eaed4441bf7b263ebd0f879d)
+[![OSF data](https://img.shields.io/badge/OSF-DOI%2010.17605%2FOSF.IO%2FU2GZQ-orange)](https://osf.io/u2gzq/?view_only=1d989690eaed4441bf7b263ebd0f879d)
 
 This repository hosts a GNN implementation using pytorch_geometric for studying neutron capture processes in LArTPCs, specifically in the DUNE experiment.
 
