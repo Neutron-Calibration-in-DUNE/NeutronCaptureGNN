@@ -23,6 +23,7 @@ import networkx as nx
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 import torch_geometric.transforms as T
+import csv
 
 class NeutronDataset(InMemoryDataset):
     """
@@ -38,7 +39,7 @@ class NeutronDataset(InMemoryDataset):
         super(NeutronDataset, self).__init__('.', transform, None, None)
         #---------------------------------------------------------------
         # list of nodes and their feature values
-        self.x = torch.tensor([], dtype=torch.float)
+        self.x = torch.tensor([], dtype=torch.float)    # (x,y,z)
         # list denoting the edges, the format is
         # [[n1,n2,n3,n4,n5,...],
         #  [m1,m2,m3,m4,m5,...]]
