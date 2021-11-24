@@ -8,7 +8,7 @@ def make_dir(folder_name):
         os.makedirs(folder_name)
 
 def generate_training_files(input_root_file,
-    folder_name='../data/train/',
+    folder_name='../data/raw/',
 ):
     make_dir(folder_name)
     f = uproot.open(input_root_file)
