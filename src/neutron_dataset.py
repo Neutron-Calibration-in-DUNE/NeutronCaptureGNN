@@ -48,7 +48,8 @@ class NeutronDataset(Dataset):
             downloading is not triggered.
         """
         return [f'train_{i}.csv' for i in range(500)]
-        #return ['train_{}.csv'.format(i) for i in range(500)]
+        #return [f'train_{i}.csv' for i in range(250)]
+        #return [f'train_{i}.csv' for i in range(250,500)]
 
     @property
     def processed_file_names(self):
@@ -59,7 +60,7 @@ class NeutronDataset(Dataset):
             self.raw_paths[0],
             header=0,
             names=['x','y','z','num_electrons','energy','gamma','neutron']).reset_index()
-        return [f'data_{i}.pt' for i in range(500)]
+        return [f'train_{i}.pt' for i in range(500)]
         #return ['']
 
     def download(self):
@@ -86,7 +87,9 @@ class NeutronDataset(Dataset):
                         y=labels)
 
             torch.save(data_obj, 
-                os.path.join(self.processed_dir, f'data_{i}.pt'))
+                os.path.join(self.processed_dir, f'train_{i}.pt'))
+            #torch.save(data_obj, 
+            #    os.path.join(self.processed_dir, f'test_{i}.pt'))
 
     def _get_node_features(self):
         """
@@ -106,7 +109,7 @@ class NeutronDataset(Dataset):
                 self.data['z'][i],    # z position
                 self.data['num_electrons'][i]     # number of electrons
             ])
-        return torch.tensor(self.node_feats, dtype=torch.float)
+        return torch.tensor(np.asarray(self.node_feats), dtype=torch.float)
     
     def _get_adjacency_info(self):
         """
@@ -141,12 +144,12 @@ class NeutronDataset(Dataset):
         self.edge_feats = []
         for i in range(len(self.edge_index[0])):
             self.edge_feats.append(
-                self._distance(
+                [self._distance(
                     self.x[self.edge_index[0][i]],
                     self.x[self.edge_index[1][i]]
-                )
+                )]
             )
-        return torch.tensor(self.edge_feats, dtype=torch.float)
+        return torch.tensor(np.asarray(self.edge_feats), dtype=torch.float)
 
     def _get_labels(self):
         """
@@ -155,7 +158,7 @@ class NeutronDataset(Dataset):
         self.labels = []
         for i in range(len(self.data)):
             self.labels.append(self.data['gamma'][i])
-        return torch.tensor(self.labels, dtype=torch.int64)
+        return torch.tensor(np.asarray(self.labels), dtype=torch.int64)
 
     def _distance(self,
         p1,
@@ -170,10 +173,10 @@ class NeutronDataset(Dataset):
         return np.sqrt(distance)
 
     def len(self):
-        return self.data.shape[0]
+        return 500
 
     def get(self,idx):
-        data = torch.load(os.path.join(self.processed_dir, f'data_{idx}.pt'))
+        data = torch.load(os.path.join(self.processed_dir, f'train_{idx}.pt'))
         return data
     
     def __repr__(self):
@@ -183,10 +186,4 @@ class NeutronDataset(Dataset):
 
 dataset = NeutronDataset("../data",4,1,eps=.5)
 
-print(dataset[0])
-
-print(dataset[0].edge_index.t())
-print(dataset[0].x)
-print(dataset[0].edge_attr)
-print(dataset[0].y)
 
