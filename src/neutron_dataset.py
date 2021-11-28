@@ -158,7 +158,16 @@ class NeutronDataset(Dataset):
         self.labels = []
         for i in range(len(self.data)):
             self.labels.append(self.data['gamma'][i])
-        return torch.tensor(np.asarray(self.labels), dtype=torch.int64)
+        # for all edges constructed, determine whether they
+        # should exist or not
+        self.edge_preds = []
+        for i in range(len(self.edge_index[0])):
+            if self.data['gamma'][self.edge_index[0][i]] == self.data['gamma'][self.edge_index[1][i]]:
+                self.edge_preds.append([1])
+            else:
+                self.edge_preds.append([0])
+        return torch.tensor(np.asarray(self.edge_preds), dtype=torch.float)
+        #return torch.tensor(np.asarray(self.labels), dtype=torch.int64)
 
     def _distance(self,
         p1,
@@ -182,8 +191,4 @@ class NeutronDataset(Dataset):
     def __repr__(self):
         return '{}()'.format(self.__class__.__name__)
 
-    
-
-dataset = NeutronDataset("../data",4,1,eps=.5)
-
-
+dataset = NeutronDataset("../data",4,1,eps=50)
