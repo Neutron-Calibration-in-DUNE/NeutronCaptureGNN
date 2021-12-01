@@ -9,11 +9,12 @@ def make_dir(folder_name):
 
 def generate_training_files(input_root_file,
     folder_name='../data/raw/',
+    num_events=20,
 ):
     make_dir(folder_name)
     f = uproot.open(input_root_file)
     vals = f['ana/neutron'].arrays()
-    for i in range(len(vals['event_id'])):
+    for i in range(num_events):
         # node features
         edep_x = vals['edep_x'][i]
         edep_y = vals['edep_y'][i]
@@ -44,5 +45,5 @@ def generate_training_files(input_root_file,
             writer.writerows(data)
 
 if __name__ == "__main__":
-    generate_training_files("~/physics/neutrino_physics/NeutronDataset_500_100.root")
+    generate_training_files("~/physics/neutrino_physics/data/NeutronDataset_5000_1.root")
 

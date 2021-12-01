@@ -144,7 +144,7 @@ class EdgeLayer(nn.Module):
         out = torch.cat([src, dest, edge_attr], dim=1)
         return self.edge_mlp(out)
 
-train_dataset = NeutronDataset("../data/",4,1,eps=.5)
+train_dataset = NeutronDataset("../data/",4,1,eps=50)
 
 print(train_dataset[0].edge_index.t())
 print(train_dataset[0].x)
@@ -159,7 +159,7 @@ loss_fn   = torch.nn.MSELoss()
 optimizer = torch.optim.SGD(model.parameters(), lr=0.1, momentum=0.9)
 scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer, gamma=0.95)
 
-NUM_GRAPHS_PER_BATCH = 3
+NUM_GRAPHS_PER_BATCH = 1
 train_loader = DataLoader(train_dataset,
     batch_size=NUM_GRAPHS_PER_BATCH, shuffle=True)
 

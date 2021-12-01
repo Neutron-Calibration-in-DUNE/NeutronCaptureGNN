@@ -47,7 +47,7 @@ class NeutronDataset(Dataset):
             If these files are found in the raw directory, then
             downloading is not triggered.
         """
-        return [f'train_{i}.csv' for i in range(500)]
+        return [f'train_{i}.csv' for i in range(20)]
         #return [f'train_{i}.csv' for i in range(250)]
         #return [f'train_{i}.csv' for i in range(250,500)]
 
@@ -60,14 +60,14 @@ class NeutronDataset(Dataset):
             self.raw_paths[0],
             header=0,
             names=['x','y','z','num_electrons','energy','gamma','neutron']).reset_index()
-        return [f'train_{i}.pt' for i in range(500)]
+        return [f'train_{i}.pt' for i in range(20)]
         #return ['']
 
     def download(self):
         pass
 
     def process(self):
-        for i in range(500):
+        for i in range(20):
             self.data = pd.read_csv(
                 self.raw_paths[i],
                 header=0,
@@ -135,6 +135,15 @@ class NeutronDataset(Dataset):
                 self.edge_labels.append(temp_labels)
                 temp_label = labels[i]
                 temp_labels = [i]
+            if i == len(labels)-1:
+                for j in range(len(temp_labels)):
+                    for k in range(len(temp_labels)):
+                        if j != k:
+                            self.edge_index[0].append(temp_labels[j])
+                            self.edge_index[1].append(temp_labels[k])
+                self.edge_labels.append(temp_labels)
+                temp_label = labels[i]
+                temp_labels = [i]
         return torch.tensor(self.edge_index, dtype=torch.long)
 
     def _get_edge_features(self):
@@ -182,7 +191,7 @@ class NeutronDataset(Dataset):
         return np.sqrt(distance)
 
     def len(self):
-        return 500
+        return 20
 
     def get(self,idx):
         data = torch.load(os.path.join(self.processed_dir, f'train_{idx}.pt'))
