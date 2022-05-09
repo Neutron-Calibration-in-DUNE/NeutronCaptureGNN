@@ -1,0 +1,17 @@
+[09:35:27] [INFO] [gamma_32_4_3_0.2_1_32_0.1_0.5_0.0001_0.5_trainer]: constructing model trainer.
+[09:35:27] [INFO] [gamma_32_4_3_0.2_1_32_0.1_0.5_0.0001_0.5_trainer]: creating predictions directory 'predictions/gamma_32_4_3_0.2_1_32_0.1_0.5_0.0001_0.5/'
+[09:35:27] [INFO] [gamma_32_4_3_0.2_1_32_0.1_0.5_0.0001_0.5_trainer]: creating manifold directory 'plots/gamma_32_4_3_0.2_1_32_0.1_0.5_0.0001_0.5/manifold/'
+[09:35:27] [INFO] [gamma_32_4_3_0.2_1_32_0.1_0.5_0.0001_0.5_trainer]: creating features directory 'plots/gamma_32_4_3_0.2_1_32_0.1_0.5_0.0001_0.5/features/'
+[09:35:27] [INFO] [gamma_32_4_3_0.2_1_32_0.1_0.5_0.0001_0.5_trainer]: creating timing directory 'plots/gamma_32_4_3_0.2_1_32_0.1_0.5_0.0001_0.5/timing/'
+[09:35:27] [INFO] [gamma_32_4_3_0.2_1_32_0.1_0.5_0.0001_0.5_trainer]: creating memory directory 'plots/gamma_32_4_3_0.2_1_32_0.1_0.5_0.0001_0.5/memory/'
+[09:35:27] [INFO] [gamma_32_4_3_0.2_1_32_0.1_0.5_0.0001_0.5_trainer]: CUDA is available with devices:
+[09:35:27] [INFO] [gamma_32_4_3_0.2_1_32_0.1_0.5_0.0001_0.5_trainer]:  -- device: 0 - name: NVIDIA GeForce RTX 3070 Ti, compute: 8.6, memory: 8366784512
+[09:35:27] [INFO] [gamma_32_4_3_0.2_1_32_0.1_0.5_0.0001_0.5_trainer]: CUDA is available, using device 0 - NVIDIA GeForce RTX 3070 Ti
+[09:35:27] [INFO] [gamma_32_4_3_0.2_1_32_0.1_0.5_0.0001_0.5_trainer]: running consistency check...
+[09:35:27] [INFO] [gamma_32_4_3_0.2_1_32_0.1_0.5_0.0001_0.5_trainer]: passed consistency check.
+[09:35:27] [INFO] [gamma_32_4_3_0.2_1_32_0.1_0.5_0.0001_0.5_trainer]: training dataset 'gamma' for 2 epochs.
+[09:36:20] [INFO] [gamma_32_4_3_0.2_1_32_0.1_0.5_0.0001_0.5_trainer]: training finished.
+[09:36:23] [INFO] [gamma_32_4_3_0.2_1_32_0.1_0.5_0.0001_0.5_trainer]: Running inference to save predictions.
+[09:36:23] [INFO] [gamma_32_4_3_0.2_1_32_0.1_0.5_0.0001_0.5_trainer]: running inference on dataset 'gamma'.
+[09:36:37] [INFO] [gamma_32_4_3_0.2_1_32_0.1_0.5_0.0001_0.5_trainer]: saved predictions array 'gamma_32_4_3_0.2_1_32_0.1_0.5_0.0001_0.5_predictions' to dataset file 'data/raw/gammas.npz'.
+[09:36:37] [INFO] [gamma_32_4_3_0.2_1_32_0.1_0.5_0.0001_0.5_trainer]: returning predictions.

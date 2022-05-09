@@ -1,0 +1,12 @@
+[07:36:54] [INFO] [gamma_test_trainer]: constructing model trainer.
+[07:36:54] [INFO] [gamma_test_trainer]: CUDA is available with devices:
+[07:36:54] [INFO] [gamma_test_trainer]:  -- device: 0 - name: NVIDIA GeForce RTX 3070 Ti, compute: 8.6, memory: 8366784512
+[07:36:54] [INFO] [gamma_test_trainer]: CUDA is available, using device 0 - NVIDIA GeForce RTX 3070 Ti
+[07:36:56] [INFO] [gamma_test_trainer]: running consistency check...
+[07:36:58] [INFO] [gamma_test_trainer]: passed consistency check.
+[07:36:58] [INFO] [gamma_test_trainer]: training dataset 'gamma' for 25 epochs.
+[08:24:37] [INFO] [gamma_test_trainer]: training finished.
+[08:24:43] [INFO] [gamma_test_trainer]: Running inference to save predictions.
+[08:24:43] [INFO] [gamma_test_trainer]: running inference on dataset 'gamma'.
+[08:25:33] [INFO] [gamma_test_trainer]: saved predictions array 'gamma_test_predictions' to dataset file 'data/raw/gammas.npz'.
+[08:25:33] [INFO] [gamma_test_trainer]: returning predictions.

@@ -1,0 +1,17 @@
+[12:23:34] [INFO] [gamma_32_2_3_0.8_2_32_0.01_0.5_1e-05_1_trainer]: constructing model trainer.
+[12:23:34] [INFO] [gamma_32_2_3_0.8_2_32_0.01_0.5_1e-05_1_trainer]: creating predictions directory 'predictions/gamma_32_2_3_0.8_2_32_0.01_0.5_1e-05_1/'
+[12:23:34] [INFO] [gamma_32_2_3_0.8_2_32_0.01_0.5_1e-05_1_trainer]: creating manifold directory 'plots/gamma_32_2_3_0.8_2_32_0.01_0.5_1e-05_1/manifold/'
+[12:23:34] [INFO] [gamma_32_2_3_0.8_2_32_0.01_0.5_1e-05_1_trainer]: creating features directory 'plots/gamma_32_2_3_0.8_2_32_0.01_0.5_1e-05_1/features/'
+[12:23:34] [INFO] [gamma_32_2_3_0.8_2_32_0.01_0.5_1e-05_1_trainer]: creating timing directory 'plots/gamma_32_2_3_0.8_2_32_0.01_0.5_1e-05_1/timing/'
+[12:23:34] [INFO] [gamma_32_2_3_0.8_2_32_0.01_0.5_1e-05_1_trainer]: creating memory directory 'plots/gamma_32_2_3_0.8_2_32_0.01_0.5_1e-05_1/memory/'
+[12:23:34] [INFO] [gamma_32_2_3_0.8_2_32_0.01_0.5_1e-05_1_trainer]: CUDA is available with devices:
+[12:23:34] [INFO] [gamma_32_2_3_0.8_2_32_0.01_0.5_1e-05_1_trainer]:  -- device: 0 - name: NVIDIA GeForce RTX 3070 Ti, compute: 8.6, memory: 8366784512
+[12:23:34] [INFO] [gamma_32_2_3_0.8_2_32_0.01_0.5_1e-05_1_trainer]: CUDA is available, using device 0 - NVIDIA GeForce RTX 3070 Ti
+[12:23:34] [INFO] [gamma_32_2_3_0.8_2_32_0.01_0.5_1e-05_1_trainer]: running consistency check...
+[12:23:34] [INFO] [gamma_32_2_3_0.8_2_32_0.01_0.5_1e-05_1_trainer]: passed consistency check.
+[12:23:34] [INFO] [gamma_32_2_3_0.8_2_32_0.01_0.5_1e-05_1_trainer]: training dataset 'gamma' for 100 epochs.
+[13:16:59] [INFO] [gamma_32_2_3_0.8_2_32_0.01_0.5_1e-05_1_trainer]: training finished.
+[13:17:01] [INFO] [gamma_32_2_3_0.8_2_32_0.01_0.5_1e-05_1_trainer]: Running inference to save predictions.
+[13:17:02] [INFO] [gamma_32_2_3_0.8_2_32_0.01_0.5_1e-05_1_trainer]: running inference on dataset 'gamma'.
+[13:17:17] [INFO] [gamma_32_2_3_0.8_2_32_0.01_0.5_1e-05_1_trainer]: saved predictions array 'gamma_32_2_3_0.8_2_32_0.01_0.5_1e-05_1_predictions' to dataset file 'data/raw/gammas.npz'.
+[13:17:17] [INFO] [gamma_32_2_3_0.8_2_32_0.01_0.5_1e-05_1_trainer]: returning predictions.

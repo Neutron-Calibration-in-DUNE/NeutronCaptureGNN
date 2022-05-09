@@ -1,0 +1,17 @@
+[09:29:06] [INFO] [gamma_128_2_3_0.2_3_128_0.001_0.5_0.001_0.995_trainer]: constructing model trainer.
+[09:29:06] [INFO] [gamma_128_2_3_0.2_3_128_0.001_0.5_0.001_0.995_trainer]: creating predictions directory 'predictions/gamma_128_2_3_0.2_3_128_0.001_0.5_0.001_0.995/'
+[09:29:06] [INFO] [gamma_128_2_3_0.2_3_128_0.001_0.5_0.001_0.995_trainer]: creating manifold directory 'plots/gamma_128_2_3_0.2_3_128_0.001_0.5_0.001_0.995/manifold/'
+[09:29:06] [INFO] [gamma_128_2_3_0.2_3_128_0.001_0.5_0.001_0.995_trainer]: creating features directory 'plots/gamma_128_2_3_0.2_3_128_0.001_0.5_0.001_0.995/features/'
+[09:29:06] [INFO] [gamma_128_2_3_0.2_3_128_0.001_0.5_0.001_0.995_trainer]: creating timing directory 'plots/gamma_128_2_3_0.2_3_128_0.001_0.5_0.001_0.995/timing/'
+[09:29:06] [INFO] [gamma_128_2_3_0.2_3_128_0.001_0.5_0.001_0.995_trainer]: creating memory directory 'plots/gamma_128_2_3_0.2_3_128_0.001_0.5_0.001_0.995/memory/'
+[09:29:06] [INFO] [gamma_128_2_3_0.2_3_128_0.001_0.5_0.001_0.995_trainer]: CUDA is available with devices:
+[09:29:06] [INFO] [gamma_128_2_3_0.2_3_128_0.001_0.5_0.001_0.995_trainer]:  -- device: 0 - name: NVIDIA GeForce RTX 3070 Ti, compute: 8.6, memory: 8366784512
+[09:29:06] [INFO] [gamma_128_2_3_0.2_3_128_0.001_0.5_0.001_0.995_trainer]: CUDA is available, using device 0 - NVIDIA GeForce RTX 3070 Ti
+[09:29:08] [INFO] [gamma_128_2_3_0.2_3_128_0.001_0.5_0.001_0.995_trainer]: running consistency check...
+[09:29:08] [INFO] [gamma_128_2_3_0.2_3_128_0.001_0.5_0.001_0.995_trainer]: passed consistency check.
+[09:29:08] [INFO] [gamma_128_2_3_0.2_3_128_0.001_0.5_0.001_0.995_trainer]: training dataset 'gamma' for 2 epochs.
+[09:30:05] [INFO] [gamma_128_2_3_0.2_3_128_0.001_0.5_0.001_0.995_trainer]: training finished.
+[09:30:08] [INFO] [gamma_128_2_3_0.2_3_128_0.001_0.5_0.001_0.995_trainer]: Running inference to save predictions.
+[09:30:08] [INFO] [gamma_128_2_3_0.2_3_128_0.001_0.5_0.001_0.995_trainer]: running inference on dataset 'gamma'.
+[09:30:23] [INFO] [gamma_128_2_3_0.2_3_128_0.001_0.5_0.001_0.995_trainer]: saved predictions array 'gamma_128_2_3_0.2_3_128_0.001_0.5_0.001_0.995_predictions' to dataset file 'data/raw/gammas.npz'.
+[09:30:23] [INFO] [gamma_128_2_3_0.2_3_128_0.001_0.5_0.001_0.995_trainer]: returning predictions.
